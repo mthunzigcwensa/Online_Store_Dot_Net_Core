@@ -1,0 +1,83 @@
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .reg-width {
+        width: 100%;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+.custom-background {
+    background-color: #2F3539;
+}
+
+.btn-black {
+    background-color: #1E2F3B;
+    color: aliceblue;
+}
+.btn-orange {
+    background-color: #C12542;
+    color: aliceblue
+}
+
+.my-width{
+    width: 50%;
+}
+
+.reg-width {
+    width: 70%;
+}
+
+.my-height{
+    height: 80px;
+}
+
+
+/* Scrollbar styling */
+/* Works for Webkit browsers like Chrome, Safari, and new Edge */
+::-webkit-scrollbar {
+    height: 8px; /* Height of horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #2F3539; /* Color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2F3539; /* Color of the scroll thumb */
+    border-radius: 4px; /* Rounded corners on the scroll thumb */
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Color of the scroll thumb when hovered or active */
+    }
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+
+.mywrapper {
+   background-color: black;
+   width: 100%;
+   height: 100%;
+  
+}
