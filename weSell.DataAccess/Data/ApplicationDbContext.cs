@@ -20,6 +20,11 @@ namespace weSell.DataAccess.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Company> Companys { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<OrderHeader> OrderHeaders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,6 +35,30 @@ namespace weSell.DataAccess.Data
                 new Category { Id = 1, Name = "Action", DisplayOrder = 1 },
                 new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
                 new Category { Id = 3, Name = "History", DisplayOrder = 3 }
+                );
+
+            modelBuilder.Entity<Company>().HasData(
+
+                new Company 
+                {
+                    Id = 1,
+                    Name = "google",
+                    City = "Silicon Valley",
+                    PostalCode = "231", 
+                    State = "u.s.a", 
+                    StreetAddress = "silicon avenu RD", 
+                    PhoneNumber = "0242414"
+                },
+                new Company
+                {
+                    Id = 2,
+                    Name = "amazon",
+                    City = "Valley",
+                    PostalCode = "4242",
+                    State = "u.s.a",
+                    StreetAddress = "valley avenu RD",
+                    PhoneNumber = "65324356"
+                }
                 );
 
             modelBuilder.Entity<Product>().HasData(
@@ -45,7 +74,7 @@ namespace weSell.DataAccess.Data
                     Price50 = 85,
                     Price100 = 80,
                     CategoryId = 1,
-                    ImageUrl = ""
+                    
                 },
                 new Product
                 {
@@ -59,7 +88,7 @@ namespace weSell.DataAccess.Data
                     Price50 = 25,
                     Price100 = 20,
                     CategoryId = 1,
-                    ImageUrl = ""
+                    
                 },
                 new Product
                 {
@@ -73,7 +102,7 @@ namespace weSell.DataAccess.Data
                     Price50 = 40,
                     Price100 = 35,
                     CategoryId = 1,
-                    ImageUrl = ""
+                   
                 },
                 new Product
                 {
@@ -87,7 +116,7 @@ namespace weSell.DataAccess.Data
                     Price50 = 60,
                     Price100 = 55,
                     CategoryId = 2,
-                    ImageUrl = ""
+                    
                 },
                 new Product
                 {
@@ -101,7 +130,7 @@ namespace weSell.DataAccess.Data
                     Price50 = 25,
                     Price100 = 20,
                     CategoryId = 2,
-                    ImageUrl = ""
+                    
                 },
                 new Product
                 {
@@ -115,7 +144,7 @@ namespace weSell.DataAccess.Data
                     Price50 = 22,
                     Price100 = 20,
                     CategoryId = 3,
-                    ImageUrl = ""
+                   
                 }
                 );
         }

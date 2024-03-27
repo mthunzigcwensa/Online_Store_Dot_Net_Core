@@ -27,9 +27,18 @@ body {
     background-color: #2F3539;
 }
 
+.text-colour {
+    color: #2F3539;
+}
+
 .btn-black {
     background-color: #1E2F3B;
     color: aliceblue;
+}
+
+.text-blue {
+    color: #1E2F3B;
+    
 }
 .btn-orange {
     background-color: #C12542;
